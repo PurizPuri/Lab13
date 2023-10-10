@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    .header {
+        background-color: #96ee73;
+        padding: 20px;
+        text-align: center;
+    }
+    body {
+        margin: 0;
+    }
+    /* Style the header*/
+    .header {
+        background-color: #e4bcbc;
+        padding: 20px;
+        text-align: center;
+    }
+    .sidenav {
+        height: 100%;
+        width: 160px;
+        position: fixed;
+        z-index: 1;
+        top: 8;
+        left: 5;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+    /* The navigation menu links */
+    .sidenav a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #818181;
+        display: block;
+    }    
+    
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+    
+    .column {
+        float: right;
+        width: 45%;
+        padding: 10px;
+    }
+    
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    /* Responsive layout - makes the three columns stack*/
+    @media screen and (max-width:900px) {
+        .column {
+            width: 50%;
+        }
+    }
+    /* Style the table */
+    table, th, td{
+        border: 2px solid #d7d6d6;
+    }
+    table{
+        border-collapse: collapse;
+        width: 100%;
+    }
+    tr:nth-child(even){
+        background-color: #f2f2f2b5;
+    }
+    th{
+        background-color: #04AA6D;
+        color: white;
+        height: 20px;
+    }
+</style>
+</head>
+<body>
+    
+    <div class="sidenav">
+        <a href="#">เข้าสู่ระบบ</a>
+        <a href="#">วิชาที่เปิดสอน</a>
+        <a href="#">ตารางเรียนนิสิต</a>
+        <a href="#">ตารางการใช้ห้อง</a>
+    </div>
+
+    <div class="header">
+        <h1>ระบบทะเบียนมหาวิทยาลัยบูรพา</h1>
+    </div>
+
+    <div class="row">
+
+        <div class="column">
+            <h2>รายวิชาที่เรียน</h2>
+                <div style="overflow-x: auto;">
+                    <table>
+                        <tr>
+                            <th>ลำดับ</th>
+                            <th>รหัสวิชา</th>
+                            <th>หน่วยกิต</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>88612547</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>88635359</td>
+                            <td>3</td>
+                        </tr>
+                    </table>
+                </div>
+        </div>
+
+        <div class="column">
+            <h2>ประกาศเรื่อง</h2>
+            <p>กำหนดการประเมินการเรียนการสอนปีการศึกษา 2565 ภาคปลาย</p>
+        </div>
+    </div>
+</body>
+</html>

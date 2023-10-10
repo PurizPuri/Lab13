@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    .header {
+        background-color: #96ee73;
+        padding: 20px;
+        text-align: center;
+    }
+    body {
+        margin: 0;
+    }
+    /* Style the header*/
+    .header {
+        background-color: #e4bcbc;
+        padding: 20px;
+        text-align: center;
+    }
+    .sidenav {
+        height: 100%;
+        width: 160px;
+        position: fixed;
+        z-index: 1;
+        top: 8;
+        left: 5;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+    /* The navigation menu links */
+    .sidenav a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+    }    
+    
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+    
+    .column {
+        float: right;
+        width: 29%;
+        padding: 8px;
+    }
+    
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    /* Responsive layout - makes the three columns stack*/
+    @media screen and (max-width:900px) {
+        .column {
+            width: 80%;
+        }
+    }
+    /* Style the footer */
+    .footer {
+        background-color: #f1f1f1;
+        padding: 10px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+    
+    <div class="sidenav">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div class="header">
+        <h1>Header</h1>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <h2>Column</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Maecenas sit amet pretium urna. Vivamus venenatis velit 
+                nec neque ultricies, eget elementum magna tristique. Quisque vehicula, 
+                risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. 
+                Praesent scelerisque tortor sed accumsan convallis.</p>
+        </div>
+
+        <div class="column">
+            <h2>Column</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Maecenas sit amet pretium urna. Vivamus venenatis velit 
+                nec neque ultricies, eget elementum magna tristique. Quisque vehicula, 
+                risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. 
+                Praesent scelerisque tortor sed accumsan convallis.</p>
+        </div>
+
+        <div class="column">
+            <h2>Column</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Maecenas sit amet pretium urna. Vivamus venenatis velit 
+                nec neque ultricies, eget elementum magna tristique. Quisque vehicula, 
+                risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. 
+                Praesent scelerisque tortor sed accumsan convallis.</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Footer</p>
+    </div>
+</body>
+</html>
